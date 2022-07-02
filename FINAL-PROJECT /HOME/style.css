@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body{
+    background-color:#F8EBFF;
+}
+
+.toggle{
+  position: fixed;
+  top:20px ;
+  right:30px;
+  width: 50px;
+  height: 40px;
+  background:#F8EBFF url(menu.png);
+  background-size: 45px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 1000;
+
+
+}
+
+.toggle.active { 
+    background:#000 url(cancel.png);
+    background-size:30px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+}
+
+
+section {
+    padding: 100px;
+    min-height: 100vh;
+}  
+
+.banner.contentBx,.sidebar
+ {
+    position: absolute;
+    top:0;
+    right:0;
+    width: 73%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    /* background-color: black; */
+}
+
+.banner.imgSiderbar {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 500px;
+    height: 100%;
+}
+
+img {
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 450px;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+
+}
+
+.contentBx {
+    top:0;
+    left: 3em;
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+
+}
+
+.logoText {
+    position: absolute;
+    top:30px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+
+.wrapper {
+    min-height: 60vh; 
+    justify-content: center;
+    align-items: center; 
+} 
+
+
+
+
+.static_text {
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    left:4em ;
+    top:8em;
+} 
+
+.second_static_text {
+    font-size: 60px;
+    text-align: center;
+    position: relative;
+    left:-3em ;
+    top:5em;
+}
+
+
+.dynamic-texts p {
+    font-size: 75px;
+    background: -webkit-linear-gradient(rgb(201, 79, 220), rgb(10, 10, 10, 10));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 50px;    
+    font-size: 30px;
+    position: relative;
+    top: 90px;
+    left:25em;
+    text-shadow: 7px 7px 7px #D485FF;
+    top:5em;
+    animation: slide 12s steps(4)
+    infinite;
+}
+
+@keyframes slide {
+    100% {}
+}
+
+
+
+.dynamic-texts p::after {
+    content: "";
+    position: absolute;
+    background-color:#F8EBFF;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-left:  2px solid;
+    animation: typing 4s steps(10) 
+    infinite;  
+}
+
+ @keyframes typing {
+    40%,
+    20%{
+        left: calc(20% + 30px);
+    }
+    100% {
+        left:0; 
+    }
+}
+
+
+
+.sidebar { 
+     position: fixed;
+    /* background: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    padding: 40px;
+    z-index: 100;
+    right:-100%;
+    background-color:black;
+}
+
+
+ .sidebar.active {
+   right:0;
+}  
+
+.sidebar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar ul li a {
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure; 
+    text-decoration: none;
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+
+.sidebar ul li a:hover{
+    color: #D485FF;
+    
+}
